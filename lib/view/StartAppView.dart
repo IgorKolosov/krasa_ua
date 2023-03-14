@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:krasaua/remote/Key.dart';
 import 'package:krasaua/remote/LocationsDevice.dart';
 import 'package:krasaua/remote/VersionURL.dart';
+import 'package:krasaua/translation/Messages.dart';
 import 'package:krasaua/util/Constants.dart';
 import 'package:location/location.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -14,12 +16,17 @@ class StartAppView extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Geolocation',
-      theme: ThemeData(
-        primaryColor: Color(0xFF5F5AC5),
-      ),
-      home: GetUserLocation(title: 'Flutter Geolocation'),
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+        title: 'Flutter Geolocation',
+        translations: Messages(),
+        locale: Get.deviceLocale,
+        fallbackLocale: const Locale('uk', 'UA'),
+        theme: ThemeData(
+          primaryColor: const Color(0xFF5F5AC5),
+        ),
+        home: GetUserLocation(title: 'Flutter Geolocation'),
+
     );
   }
 }

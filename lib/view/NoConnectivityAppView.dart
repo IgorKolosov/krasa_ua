@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
-
+import 'package:get/utils.dart';
 import 'StartAppView.dart';
 
 
@@ -11,7 +11,6 @@ Future<bool> checkConnectivity() async {
   } else if (connectivityResult == ConnectivityResult.wifi) {
     return true;
   }
-
   return false;
 }
 
@@ -38,22 +37,22 @@ class _NoConnectivityAppViewState extends State<NoConnectivityAppView> {
               height: 256.0,
               width: 256.0,
             ),
-            SizedBox(height: 32.0),
+            const SizedBox(height: 32.0),
             Text(
-              'Помилка!',
-              style: TextStyle(fontSize: 30.0, color: Colors.black),
+              'error'.tr,
+              style: const TextStyle(fontSize: 30.0, color: Colors.black),
             ),
-            SizedBox(height: 8.0),
-            Text('Відсутнє підключення до Інтернету',
-                style: TextStyle(fontSize: 20.0, color: Colors.black)),
-            SizedBox(height: 32.0),
+            const SizedBox(height: 8.0),
+            Text('noInternetConnection'.tr,
+                style: const TextStyle(fontSize: 20.0, color: Colors.black)),
+            const SizedBox(height: 32.0),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Color(0xFF5F5AC5)),
+              style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF5F5AC5)),
               onPressed: () {
                 Route route = MaterialPageRoute(builder: (context) => StartAppView());
                 Navigator.pushReplacement(context, route);
               },
-              child: Text("спробуйте ще раз"),
+              child: Text("tryAgain".tr),
             )
           ],
         ),

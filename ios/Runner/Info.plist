@@ -2,17 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-      <string>https</string>
-      <string>http</string>
-    </array>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>Your explanation</string>
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string>Your explanation</string>
-    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-    <string>Your explanation</string>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -31,8 +22,19 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>https</string>
+		<string>http</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app requests access to your location in both 'always allowed' and 'only allowed when in use' mode. We use location data to provide you with personalized recommendations and notifications, identify nearby places and businesses, and improve the app experience. Your location data will not be shared with third parties without your express consent</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This app requests access to your location in 'always allowed' mode to provide you with more accurate recommendations and notifications even when the app is not running. Your location will only be used within the app and will not be shared with third parties without your consent</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app only requests access to your location in 'when the app is in use' mode. We use location data to provide you with personalized recommendations and notifications, identify nearby places and businesses, and improve the app experience. Your location data will not be shared with third parties without your express consent</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -40,15 +42,13 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
